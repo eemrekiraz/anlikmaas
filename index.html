@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Anlık Maaş ile mesai saatleriniz boyunca saniyelik, dakikalık ve saatlik kazancınızı canlı olarak takip edin. Zamanınızı varlığa dönüştürün.">
     <title>Anlık Maaş - Zamanı Varlığa Dönüştür</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -37,15 +38,6 @@
             }
         }
     </script>
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-D42M8XJ0KB"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-D42M8XJ0KB');
-</script>
     <style>
         body { background-color: #e9ecef; color: #343a40; font-family: 'Inter', sans-serif; overflow-x: hidden; }
         .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
@@ -59,7 +51,6 @@
         input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
         input[type=number] { -moz-appearance: textfield; }
         
-        /* AdSense Placeholders */
         ins.adsbygoogle { background-color: #e2e6ea; border-radius: 8px; }
     </style>
 
@@ -68,21 +59,18 @@
 </head>
 <body class="h-screen w-screen flex flex-col overflow-hidden relative">
 
-    <div id="toast-container" class="fixed top-16 right-0 md:right-6 z-[60] flex flex-col gap-3 pointer-events-none w-full px-4 md:px-0 items-end">
-        </div>
+    <div id="toast-container" class="fixed top-16 right-0 md:right-6 z-[60] flex flex-col gap-3 pointer-events-none w-full px-4 md:px-0 items-end"></div>
 
     <section id="onboarding-view" class="absolute inset-0 z-50 flex w-full h-full bg-background transition-opacity duration-300">
         
         <aside class="hidden lg:flex w-64 border-r border-border-color p-4 items-center justify-center shrink-0">
-            <ins class="adsbygoogle"
-                 style="display:inline-block;width:160px;height:600px"
-                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                 data-ad-slot="YYYYYYYYYY"></ins>
+            <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="YYYYYYYYYY"></ins>
             <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </aside>
 
-        <div class="flex-1 flex flex-col items-center justify-center relative px-4 overflow-y-auto py-8">
-            <div class="w-full max-w-md p-8 bg-surface border border-border-color rounded-2xl shadow-md mb-6 shrink-0">
+        <div class="flex-1 flex flex-col items-center justify-start relative px-4 overflow-y-auto py-8">
+            
+            <div class="w-full max-w-md p-8 bg-surface border border-border-color rounded-2xl shadow-md mb-6 shrink-0 mt-4 md:mt-12">
                 <div class="text-center mb-8">
                     <h1 class="text-3xl font-extrabold tracking-tight text-primary-dark mb-1">Anlık Maaş</h1>
                     <p class="text-text-muted text-xs uppercase tracking-widest font-medium">Verimlilik Paneli</p>
@@ -132,20 +120,46 @@
                 </div>
             </div>
 
-            <div class="w-full max-w-md lg:hidden flex items-center justify-center shrink-0 mb-4">
-                <ins class="adsbygoogle"
-                     style="display:inline-block;width:320px;height:100px"
-                     data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                     data-ad-slot="YYYYYYYYYY"></ins>
+            <div class="w-full max-w-md lg:hidden flex items-center justify-center shrink-0 mb-8">
+                <ins class="adsbygoogle" style="display:inline-block;width:320px;height:100px" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="YYYYYYYYYY"></ins>
                 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
             </div>
+
+            <article class="w-full max-w-2xl mt-4 mb-12 text-text-main space-y-6 px-4 md:px-0">
+                <div class="bg-surface border border-border-color p-6 rounded-2xl shadow-sm">
+                    <h2 class="text-xl font-bold text-primary-dark mb-3">Anlık Maaş Hesaplama Aracı Nedir?</h2>
+                    <p class="text-sm leading-relaxed mb-4 text-text-muted">
+                        <strong>Anlık Maaş</strong>, çalışanların ve profesyonellerin ofis veya uzaktan çalışma saatleri boyunca kazançlarını <strong>saniyelik, dakikalık ve saatlik</strong> olarak canlı takip edebilmelerini sağlayan ücretsiz bir verimlilik aracıdır. Aylık net maaşınızı ve çalışma saatlerinizi sisteme girdiğinizde, tarayıcınız üzerinde çalışan özel algoritma sayesinde mesai süresince ne kadar gelir elde ettiğinizi gerçek zamanlı olarak görebilirsiniz.
+                    </p>
+                    
+                    <h3 class="text-lg font-bold text-text-main mb-2 mt-6">Nasıl Çalışır?</h3>
+                    <ul class="list-disc list-inside text-sm leading-relaxed text-text-muted space-y-2">
+                        <li><strong>Maaş Bilgisi:</strong> Aylık net gelirinizi ilgili alana girin.</li>
+                        <li><strong>Çalışma Günleri:</strong> Haftanın hangi günleri çalıştığınızı (Pazartesi, Salı vb.) işaretleyin.</li>
+                        <li><strong>Mesai Saatleri:</strong> Günlük mesai başlangıç ve bitiş saatlerinizi (Örn: 09:00 - 18:00) seçin.</li>
+                        <li>Sistemi başlattığınızda ekranınızda beliren <strong>canlı sayaç</strong> ile saniye saniye kazancınızı izleyin ve motivasyonunuzu artırın.</li>
+                    </ul>
+
+                    <h3 class="text-lg font-bold text-text-main mb-2 mt-6">Veri Gizliliği ve Güvenlik</h3>
+                    <p class="text-sm leading-relaxed text-text-muted">
+                        Gizliliğiniz bizim için çok önemlidir. Anlık Maaş platformuna girdiğiniz <strong>hiçbir maaş, gün veya saat bilgisi veritabanlarımıza kaydedilmez</strong> veya üçüncü şahıslarla paylaşılmaz. Tüm hesaplamalar anlık olarak yalnızca sizin cihazınızın (bilgisayar veya telefon) tarayıcısı üzerinde, lokal olarak gerçekleşir.
+                    </p>
+                </div>
+            </article>
+
+            <footer class="w-full max-w-2xl border-t border-border-color pt-6 pb-12 flex flex-col md:flex-row items-center justify-between text-xs text-text-muted px-4 md:px-0 mt-auto">
+                <div>&copy; 2026 Anlık Maaş. Tüm hakları saklıdır.</div>
+                <div class="flex gap-4 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-primary-dark transition-colors" onclick="alert('Verileriniz yalnızca tarayıcınızda tutulur. Çerezler Google AdSense reklam deneyimi için kullanılmaktadır.')">Gizlilik Politikası</a>
+                    <a href="#" class="hover:text-primary-dark transition-colors" onclick="alert('Sitemiz bilgilendirme ve motivasyon amaçlıdır. Çıkan sonuçlar resmi bir bordro değeri taşımaz.')">Kullanım Koşulları</a>
+                    <a href="mailto:iletisim@anlikmaas.com" class="hover:text-primary-dark transition-colors">İletişim</a>
+                </div>
+            </footer>
+
         </div>
 
         <aside class="hidden xl:flex w-64 border-l border-border-color p-4 items-center justify-center shrink-0">
-            <ins class="adsbygoogle"
-                 style="display:inline-block;width:160px;height:600px"
-                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                 data-ad-slot="YYYYYYYYYY"></ins>
+            <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="YYYYYYYYYY"></ins>
             <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </aside>
     </section>
@@ -165,22 +179,15 @@
         </nav>
 
         <main class="flex-1 flex w-full relative overflow-y-auto">
-            
             <aside class="hidden lg:flex w-64 border-r border-border-color bg-surface-variant/30 p-4 items-center justify-center shrink-0">
-                <ins class="adsbygoogle"
-                     style="display:inline-block;width:160px;height:600px"
-                     data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                     data-ad-slot="YYYYYYYYYY"></ins>
+                <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="YYYYYYYYYY"></ins>
                 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
             </aside>
 
             <section class="flex-1 flex flex-col items-center pt-4 pb-24 px-4 md:px-6 relative w-full">
                 
                 <div class="w-full max-w-4xl lg:hidden flex items-center justify-center shrink-0 mb-6 mt-2">
-                    <ins class="adsbygoogle"
-                         style="display:inline-block;width:320px;height:100px"
-                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                         data-ad-slot="YYYYYYYYYY"></ins>
+                    <ins class="adsbygoogle" style="display:inline-block;width:320px;height:100px" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="YYYYYYYYYY"></ins>
                     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
                 </div>
 
@@ -238,10 +245,7 @@
             </section>
 
             <aside class="hidden xl:flex w-64 border-l border-border-color bg-surface-variant/30 p-4 items-center justify-center shrink-0">
-                <ins class="adsbygoogle"
-                     style="display:inline-block;width:160px;height:600px"
-                     data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
-                     data-ad-slot="YYYYYYYYYY"></ins>
+                <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="YYYYYYYYYY"></ins>
                 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
             </aside>
         </main>
@@ -263,8 +267,7 @@
                 </ul>
             </div>
             
-            <div class="w-full md:w-80 h-full bg-white border-r border-[#edebe9] overflow-y-auto shrink-0" id="mail-list-container">
-            </div>
+            <div class="w-full md:w-80 h-full bg-white border-r border-[#edebe9] overflow-y-auto shrink-0" id="mail-list-container"></div>
             
             <div class="hidden md:block flex-1 bg-white p-8 overflow-y-auto">
                 <div id="mail-content" class="max-w-3xl">
@@ -275,7 +278,6 @@
     </div>
 
     <script>
-        // --- ADSENSE UYUMLU, MOBİL İÇİN KÜÇÜLTÜLMÜŞ BİLDİRİM FONKSİYONU ---
         function showNotification(title, message, icon) {
             const container = document.getElementById('toast-container');
             const toast = document.createElement('div');
@@ -297,36 +299,17 @@
                 </div>
                 
                 <div class="w-full flex justify-center overflow-hidden bg-surface-variant/20 rounded mt-1">
-                    <ins class="adsbygoogle"
-                         style="display:inline-block;width:234px;height:60px"
-                         data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" 
-                         data-ad-slot="YYYYYYYYYY"></ins>
+                    <ins class="adsbygoogle" style="display:inline-block;width:234px;height:60px" data-ad-client="ca-pub-XXXXXXXXXXXXXXXX" data-ad-slot="YYYYYYYYYY"></ins>
                 </div>
             `;
-            
             container.appendChild(toast);
             
-            try {
-                (window.adsbygoogle = window.adsbygoogle || []).push({});
-            } catch (e) {
-                console.error("AdSense yüklenme hatası:", e);
-            }
-            
-            setTimeout(() => {
-                if(toast.parentElement) toast.remove();
-            }, 60000); 
+            try { (window.adsbygoogle = window.adsbygoogle || []).push({}); } catch (e) { console.error(e); }
+            setTimeout(() => { if(toast.parentElement) toast.remove(); }, 60000); 
         }
 
-        // --- BİLDİRİM DURUM TAKİBİ ---
-        let notificationState = {
-            coffee: false,
-            food: false,
-            halfway: false,
-            oneHour: false,
-            lastDate: null
-        };
+        let notificationState = { coffee: false, food: false, halfway: false, oneHour: false, lastDate: null };
 
-        // --- MAİL DATASI (30 ADET) ---
         const MAILLER = [
             { gonderen: "İnsan Kaynakları <ik@sirket.com>", konu: "ÖNEMLİ: Yıl Sonu Performans Değerlendirme Süreci", tarih: "14:20", icerik: "Değerli Çalışma Arkadaşlarımız,<br><br>Yıl sonu performans değerlendirme süreci portal üzerinden erişime açılmıştır." },
             { gonderen: "Selin Yılmaz <syilmaz@sirket.com>", konu: "Q3 Pazarlama Stratejisi Revizyonu", tarih: "13:45", icerik: "Merhaba,<br><br>Dünkü toplantıda konuştuğumuz üzere Q3 bütçelerinde kesintiye gidiyoruz." },
@@ -393,13 +376,11 @@
         const viewDashboard = document.getElementById('dashboard-container');
         const viewBossKey = document.getElementById('boss-key-overlay');
         
-        // SİSTEMİ BAŞLAT
         document.getElementById('btn-basla').addEventListener('click', () => {
             const maasDegeri = parseFloat(document.getElementById('input-maas').value);
             if (isNaN(maasDegeri) || maasDegeri <= 0) { alert("Lütfen geçerli bir aylık net maaş giriniz."); return; }
             if (seciliGunler.length === 0) { alert("Lütfen en az 1 çalışma günü seçin."); return; }
 
-            // BİLDİRİMLERİ SIFIRLA VE EKRANI TEMİZLE
             notificationState = { coffee: false, food: false, halfway: false, oneHour: false, lastDate: null };
             document.getElementById('toast-container').innerHTML = ''; 
 
@@ -438,7 +419,6 @@
             }, 300);
         });
 
-        // GERİ DÖN (AYARLAR) VE BİLDİRİMLERİ SİL
         document.getElementById('btn-geri-don').addEventListener('click', () => {
             clearInterval(sayacInterval);
             document.getElementById('toast-container').innerHTML = ''; 
