@@ -64,7 +64,6 @@
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4656295367363190" crossorigin="anonymous"></script>
 </head>
-<!-- KAYDIRMA SORUNU ÇÖZÜLEN BODY -->
 <body class="min-h-[100dvh] w-full flex flex-col bg-background text-text-main font-sans relative overflow-x-hidden">
 
     <div id="toast-container" class="fixed top-16 right-0 md:right-6 z-[60] flex flex-col gap-3 pointer-events-none w-full px-4 md:px-0 items-end"></div>
@@ -146,11 +145,6 @@
                         Aylık net gelirin saatlik veya saniyelik bazda hesaplanması karmaşık bir matematiksel işlem gerektirebilir. Türkiye'deki standart çalışma düzeni haftalık 45 saat üzerinden kurgulansa da, her bireyin mesai takvimi farklıdır. Sistemimiz; seçtiğiniz çalışma günleri sayısını, günlük mesai başlangıç ve bitiş saatlerinizi baz alarak, aylık toplam çalışma saatinizi (Haftalık Gün x 4.33 Hafta x Günlük Saat) formülüyle tespit eder. Girilen net maaş, bu toplam saate bölünerek en doğru birim kazanç oranları çıkartılır. Tüm bu hesaplamalar anlık olarak tarayıcınızın (Browser) kendi belleği içerisinde, güvenli bir Javascript algoritması ile yapılır.
                     </p>
 
-                    <h3 class="text-lg font-bold text-text-main mb-2 mt-6">"Boss Key" (Gizleme) Özelliği Nedir?</h3>
-                    <p class="text-sm leading-relaxed mb-6 text-text-muted">
-                        Ofis ortamında çalışırken bilgisayar ekranınızın izlenmesi (mikro-yönetim) her zaman bir stres faktörüdür. Anlık Maaş, kullanıcılarının gizliliğini korumak adına gelişmiş bir <strong>Boss Key (Patron Tuşu)</strong> modülüne sahiptir. Sağ üst köşede yer alan kırmızı "GİZLE" butonuna bastığınız anda, kazanç sayacınız anında kaybolur ve ekranınız tamamen gerçekçi, sahte bir kurumsal e-posta (Outlook Web) arayüzüne dönüşür. Bu sayede ofis içerisindeki ani durumlarda tek tıkla profesyonel görünümünüzü koruyabilirsiniz.
-                    </p>
-
                     <div class="bg-surface-variant/50 p-6 rounded-xl border border-border-color mt-8">
                         <h3 class="text-md font-bold text-text-main mb-3">Gizlilik Politikası (Privacy Policy)</h3>
                         <p class="text-xs leading-relaxed mb-4 text-text-muted">
@@ -187,13 +181,10 @@
     <div id="dashboard-container" class="flex-1 flex flex-col w-full hidden opacity-0 transition-opacity duration-300">                
         <nav class="sticky top-0 h-16 border-b border-border-color bg-surface flex items-center justify-between px-4 md:px-6 shrink-0 shadow-sm z-50">            
             <div class="font-bold text-xl tracking-tight text-primary-dark hidden sm:block">Anlık Maaş</div>            
-            <div class="flex gap-2 sm:gap-4 w-full sm:w-auto justify-between sm:justify-end">                
+            <div class="flex gap-2 sm:gap-4 w-full justify-end">                
                 <button id="btn-geri-don" class="text-text-muted px-3 md:px-4 py-2 rounded-lg text-sm font-semibold hover:bg-surface-variant hover:text-text-main transition-colors flex items-center gap-1.5">                    
                     <span class="material-symbols-outlined text-[18px]">arrow_back</span> Geri Dön                
                 </button>                
-                <button id="btn-boss-key" class="bg-red-600 text-white px-5 md:px-8 py-2 rounded-lg text-sm md:text-base font-extrabold tracking-widest hover:bg-red-700 hover:scale-[1.02] active:scale-95 transition-all shadow-md flex items-center gap-2">                    
-                    <span class="material-symbols-outlined text-[20px]">visibility_off</span> GİZLE                
-                </button>            
             </div>        
         </nav>
         
@@ -249,7 +240,7 @@
                     </div>                
                 </div>
                 
-                <!-- İlerleme Çubuğu - Artık en alta doğal olarak yapışacak -->
+                <!-- İlerleme Çubuğu -->
                 <div class="w-full max-w-4xl mt-auto pt-4 pb-4">                    
                     <div class="flex justify-between items-end mb-2 px-2">                            
                         <span class="text-[9px] md:text-[10px] font-bold tracking-widest text-text-muted uppercase">Mesai Bitimine Kalan Zaman</span>                            
@@ -266,30 +257,6 @@
                 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>            
             </aside>        
         </main>    
-    </div>
-
-    <div id="boss-key-overlay" class="fixed inset-0 bg-[#ffffff] text-[#333333] z-[100] hidden flex-col font-sans">        
-        <div class="h-14 bg-[#0f6cbd] flex items-center justify-between px-4 text-white shadow-sm shrink-0">            
-            <div class="flex items-center gap-3"><span class="font-semibold text-sm">Outlook Web</span></div>            
-            <button id="btn-tehlike-gecti" class="text-xs font-semibold bg-white/10 hover:bg-white/20 px-3 py-1.5 rounded flex items-center gap-1 transition-colors"><span class="material-symbols-outlined text-[16px]">close</span> Sayaca Dön</button>        
-        </div>        
-        <div class="flex flex-1 overflow-hidden">            
-            <div class="w-56 bg-[#f3f2f1] border-r border-[#edebe9] py-2 hidden md:block shrink-0">                
-                <ul class="text-sm">                    
-                    <li class="px-4 py-2 bg-[#e1dfdd] font-semibold border-l-2 border-[#0f6cbd]">Sık Kullanılanlar</li>                    
-                    <li class="px-6 py-2 hover:bg-[#edebe9] cursor-pointer font-bold text-[#0f6cbd]">Gelen Kutusu (30)</li>                    
-                    <li class="px-6 py-2 hover:bg-[#edebe9] cursor-pointer">Gönderilmiş Öğeler</li>                    
-                    <li class="px-6 py-2 hover:bg-[#edebe9] cursor-pointer">Taslaklar</li>                    
-                    <li class="px-6 py-2 hover:bg-[#edebe9] cursor-pointer">Gereksiz E-posta</li>                
-                </ul>            
-            </div>                        
-            <div class="w-full md:w-80 h-full bg-white border-r border-[#edebe9] overflow-y-auto shrink-0" id="mail-list-container"></div>                        
-            <div class="hidden md:block flex-1 bg-white p-8 overflow-y-auto">                
-                <div id="mail-content" class="max-w-3xl">                    
-                    <div class="flex items-center justify-center h-full text-gray-400 mt-20">Okumak için bir öğe seçin</div>                
-                </div>            
-            </div>        
-        </div>    
     </div>
 
     <!-- MODERN COOKIE ONAY KARTI (Sol Alt Köşe) -->
@@ -318,25 +285,21 @@
             const btnKabul = document.getElementById('btn-cookie-kabul');
             const btnReddet = document.getElementById('btn-cookie-reddet');
 
-            // Kullanıcı daha önce bir seçim yapmadıysa kartı göster
             if (!localStorage.getItem('cerezTercihi')) {
                 setTimeout(() => {
                     banner.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
                 }, 1000);
             }
 
-            // Kartı gizleme fonksiyonu
             function kartiGizle() {
                 banner.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
             }
 
-            // Kabul Et butonuna basılınca
             btnKabul.addEventListener('click', () => {
                 localStorage.setItem('cerezTercihi', 'kabul');
                 kartiGizle();
             });
 
-            // Reddet butonuna basılınca
             btnReddet.addEventListener('click', () => {
                 localStorage.setItem('cerezTercihi', 'reddedildi');
                 kartiGizle();
@@ -372,38 +335,6 @@
         }
 
         let notificationState = { coffee: false, food: false, halfway: false, oneHour: false, lastDate: null };
-        const MAILLER = [            
-            { gonderen: "İnsan Kaynakları <ik@sirket.com>", konu: "ÖNEMLİ: Yıl Sonu Performans Değerlendirme Süreci", tarih: "14:20", icerik: "Değerli Çalışma Arkadaşlarımız,<br><br>Yıl sonu performans değerlendirme süreci portal üzerinden erişime açılmıştır." },            
-            { gonderen: "Selin Yılmaz <syilmaz@sirket.com>", konu: "Q3 Pazarlama Stratejisi Revizyonu", tarih: "13:45", icerik: "Merhaba,<br><br>Dünkü toplantıda konuştuğumuz üzere Q3 bütçelerinde kesintiye gidiyoruz." },            
-            { gonderen: "Yemekhane Hizmetleri <yemekhane@sirket.com>", konu: "Haftalık Yemek Menüsü ve Alerjen Uyarısı", tarih: "11:30", icerik: "Herkese günaydın,<br><br>Bu haftanın yemek menüsü intranet sistemine yüklenmiştir." },            
-            { gonderen: "IT Destek <it@sirket.com>", konu: "Sunucu Bakım Kesintisi Hk.", tarih: "10:15", icerik: "Değerli çalışanlarımız,<br><br>Bu gece 02:00 - 04:00 saatleri arasında sunucularda planlı bakım yapılacaktır." },            
-            { gonderen: "Muhasebe Departmanı <fatura@sirket.com>", konu: "Masraf Fişleri ve Avans Kapatmaları", tarih: "09:00", icerik: "Merhaba,<br><br>Ay sonu kapanışları nedeniyle elinizdeki taksi ve yemek masraf fişlerini departmanımıza teslim ediniz." },            
-            { gonderen: "Sistem Yöneticisi <admin@sirket.com>", konu: "Şifre Süreniz Dolmak Üzere", tarih: "Dün", icerik: "Sayın Kullanıcı,<br><br>Sistem giriş şifrenizin süresi 2 gün içinde dolacaktır." },            
-            { gonderen: "Ahmet Kaya <akaya@sirket.com>", konu: "Haftalık Durum Toplantısı Notları", tarih: "Dün", icerik: "Ekip selam,<br><br>Bugünkü toplantının özetini paylaşıyorum." },            
-            { gonderen: "İdari İşler <idari@sirket.com>", konu: "Otopark Kullanım Düzenlemesi", tarih: "Dün", icerik: "Merhaba,<br><br>B Blok otoparkında yapılacak zemin yenileme çalışması sebebiyle..." },            
-            { gonderen: "Hukuk Departmanı <hukuk@sirket.com>", konu: "Zorunlu KVKK Eğitimi Hatırlatması", tarih: "Dün", icerik: "Eğitimi tamamlamayan personellerin en geç ay sonuna kadar videoları izlemesi yasal zorunluluktur." },            
-            { gonderen: "Proje Yönetimi <pmo@sirket.com>", konu: "Yeni Sprint Başlangıcı & Jira Görevleri", tarih: "Çarşamba", icerik: "Merhaba takım,<br><br>Yeni sprint'imiz resmi olarak başlamıştır." },            
-            { gonderen: "Zeynep Demir <zdemir@sirket.com>", konu: "Müşteri Şikayeti - Acil Aksiyon Gerekiyor", tarih: "Çarşamba", icerik: "Arkadaşlar, premium müşterimizden ciddi bir şikayet aldık. İlgili ticket ID: #4492." },            
-            { gonderen: "Güvenlik Birimi <guvenlik@sirket.com>", konu: "Bina İçi Yangın Tatbikatı", tarih: "Çarşamba", icerik: "Yarın saat 14:00'da habersiz bir yangın tatbikatı yapılacaktır." },            
-            { gonderen: "Eğitim & Gelişim <egitim@sirket.com>", konu: "Liderlik Semineri Daveti", tarih: "Salı", icerik: "Kurum içi mentorluk programımız kapsamında seminer düzenlenecektir." },            
-            { gonderen: "Kargo Departmanı <posta@sirket.com>", konu: "Adınıza Gelen Bir Kargo Var", tarih: "Salı", icerik: "Resepsiyona adınıza bir kargo bırakılmıştır." },            
-            { gonderen: "Ayşe Çelik <acelik@sirket.com>", konu: "Yıllık İzin Talebi Hk.", tarih: "Salı", icerik: "Yöneticim,<br><br>Önümüzdeki hafta perşembe ve cuma günleri için izin talep ediyorum." },            
-            { gonderen: "CEO Ofisi <ceo@sirket.com>", konu: "Q2 Şirket Başarı Değerlendirmesi", tarih: "Pazartesi", icerik: "Geride bıraktığımız çeyrekte gösterdiğiniz üstün efor için teşekkür ederim." },            
-            { gonderen: "Canan Yücel <cyucel@sirket.com>", konu: "Aylık Rapor Revizyonları", tarih: "Pazartesi", icerik: "Sunumdaki grafiklerde birkaç kayma var. Toplantıdan önce 4. ve 5. slaytları güncelleyebilir misin?" },            
-            { gonderen: "Satın Alma <satinalma@sirket.com>", konu: "Donanım Siparişi Onayı", tarih: "Pazartesi", icerik: "Talep etmiş olduğunuz monitör ve klavye siparişi onaylanmıştır." },            
-            { gonderen: "Mert Öztürk <mozturk@sirket.com>", konu: "Tasarım Dosyaları Ektedir", tarih: "Pazartesi", icerik: "İstediğin banner tasarımlarını Figma linki olarak ekledim." },            
-            { gonderen: "Etkinlik Komitesi <etkinlik@sirket.com>", konu: "Cuma Günü Happy Hour!", tarih: "Pazartesi", icerik: "Bu cuma saat 16:30'da terasta pizza ve içecek eşliğinde buluşuyoruz." },            
-            { gonderen: "Burak Yılmaz <byilmaz@sirket.com>", konu: "Kod İnceleme (Code Review) Talebi", tarih: "Geçen Hf.", icerik: "PR oluşturdum. Production'a almadan önce branch'i inceleyip onay verebilir misin?" },            
-            { gonderen: "İnsan Kaynakları <ik@sirket.com>", konu: "Aramıza Yeni Katılanlar", tarih: "Geçen Hf.", icerik: "Pazarlama departmanında işe başlayan yeni çalışma arkadaşımıza hoş geldin diyoruz." },            
-            { gonderen: "IT Güvenlik <sec@sirket.com>", konu: "Oltalama (Phishing) Testi Sonuçları", tarih: "Geçen Hf.", icerik: "Geçtiğimiz hafta yapılan habersiz oltalama testinin raporu ektedir." },            
-            { gonderen: "Muhasebe Departmanı <maas@sirket.com>", konu: "Aylık Maaş Bordroları", tarih: "Geçen Hf.", icerik: "Geçen aya ait e-bordrolarınız sisteme yüklenmiştir." },            
-            { gonderen: "İdari İşler <idari@sirket.com>", konu: "Klima Arızası", tarih: "Geçen Hf.", icerik: "3. kattaki klima arızası için teknik servis çağrılmıştır." },            
-            { gonderen: "Ozan Tekin <otekin@sirket.com>", konu: "ACİL: Sunucu Hatası 502", tarih: "Geçen Hf.", icerik: "Ana sayfada anlık olarak 502 Bad Gateway hatası alıyoruz." },            
-            { gonderen: "Kurumsal İletişim <iletisim@sirket.com>", konu: "Aylık Şirket Bülteni", tarih: "Geçen Hf.", icerik: "Bu ayki başarı hikayelerimiz ve duyurularımız yayınlandı." },            
-            { gonderen: "Pazarlama <pr@sirket.com>", konu: "Sosyal Medya Kampanya Planı", tarih: "Geçen Hf.", icerik: "Gelecek ayın Instagram reels planlaması ektedir." },            
-            { gonderen: "IT Destek <it@sirket.com>", konu: "Yeni VPN İstemcisi Kurulumu", tarih: "Geçen Hf.", icerik: "Eski VPN yazılımını kaldırıp yeni versiyonu kurmanız gerekmektedir." },            
-            { gonderen: "Temizlik Hizmetleri <temizlik@sirket.com>", konu: "Masa Düzeni Hatırlatması", tarih: "Geçen Hf.", icerik: "Mesai bitiminde masaların üzerinde yiyecek bırakılmamasını rica ederiz." }        
-        ];
         
         let seciliGunler = [1, 2, 3, 4, 5]; 
         
@@ -434,7 +365,6 @@
 
         const viewOnboarding = document.getElementById('onboarding-view');        
         const viewDashboard = document.getElementById('dashboard-container');        
-        const viewBossKey = document.getElementById('boss-key-overlay');                
         
         document.getElementById('btn-basla').addEventListener('click', () => {            
             const maasDegeri = parseFloat(document.getElementById('input-maas').value);            
@@ -572,48 +502,6 @@
                 bar.style.width = `${(gecenMs / toplamMesaiMs) * 100}%`;            
             }        
         }
-
-        const mailList = document.getElementById('mail-list-container');        
-        MAILLER.forEach((m, index) => {            
-            const fontWeight = index < 4 ? "font-bold text-[#252423]" : "font-semibold text-[#605e5c]";            
-            const titleColor = index < 4 ? "text-[#0f6cbd]" : "text-[#605e5c]";                        
-            
-            mailList.innerHTML += `                
-                <div class="mail-item cursor-pointer p-4 border-b border-[#edebe9] hover:bg-[#f3f2f1]" data-index="${index}">                    
-                    <div class="flex justify-between items-baseline mb-1"><span class="${fontWeight} text-sm">${m.gonderen.split('<')[0]}</span><span class="text-xs text-[#0f6cbd] font-semibold">${m.tarih}</span></div>                    
-                    <div class="text-sm font-semibold mb-1 truncate ${titleColor}">${m.konu}</div>                
-                </div>`;        
-        });
-
-        document.getElementById('btn-boss-key').addEventListener('click', () => {            
-            viewDashboard.classList.add('hidden');            
-            viewBossKey.classList.replace('hidden', 'flex');            
-            document.title = "Anlık Maaş - Outlook";            
-            if(window.innerWidth > 768) document.querySelector('.mail-item').click();        
-        });
-
-        document.getElementById('btn-tehlike-gecti').addEventListener('click', () => {            
-            viewBossKey.classList.replace('flex', 'hidden');            
-            viewDashboard.classList.remove('hidden');            
-            document.title = "Anlık Maaş - Zamanı Varlığa Dönüştür";        
-        });
-
-        document.querySelectorAll('.mail-item').forEach(item => {            
-            item.addEventListener('click', function() {                
-                document.querySelectorAll('.mail-item').forEach(m => m.classList.remove('bg-[#e1dfdd]'));                
-                this.classList.add('bg-[#e1dfdd]');                                
-                
-                const mail = MAILLER[this.getAttribute('data-index')];                
-                document.getElementById('mail-content').innerHTML = `                    
-                    <h2 class="text-xl md:text-2xl font-bold mb-6 text-[#252423]">${mail.konu}</h2>                    
-                    <div class="flex items-center gap-3 mb-8 pb-4 border-b border-[#edebe9]">                        
-                        <div class="w-10 h-10 rounded-full bg-[#0f6cbd] text-white flex items-center justify-center font-bold text-lg">${mail.gonderen.charAt(0)}</div>                        
-                        <div><div class="font-semibold text-sm text-[#252423]">${mail.gonderen}</div><div class="text-xs text-gray-500">Kime: Siz</div></div>                    
-                    </div>                    
-                    <div class="text-sm leading-relaxed text-[#323130]">${mail.icerik}</div>                
-                `;            
-            });        
-        });    
     </script>
 </body>
 </html>
