@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <link rel="icon" type="image/png" href="favicon.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Anlık Maaş ile mesai saatleriniz boyunca saniyelik, dakikalık ve saatlik kazancınızı canlı olarak takip edin. Zamanınızı varlığa dönüştürün.">
@@ -65,19 +64,20 @@
 
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4656295367363190" crossorigin="anonymous"></script>
 </head>
-<body class="h-screen w-screen flex flex-col overflow-hidden relative">
+<!-- KAYDIRMA SORUNU ÇÖZÜLEN BODY -->
+<body class="min-h-[100dvh] w-full flex flex-col bg-background text-text-main font-sans relative overflow-x-hidden">
 
     <div id="toast-container" class="fixed top-16 right-0 md:right-6 z-[60] flex flex-col gap-3 pointer-events-none w-full px-4 md:px-0 items-end"></div>
 
-    <section id="onboarding-view" class="absolute inset-0 z-50 flex w-full h-full bg-background transition-opacity duration-300">                
+    <section id="onboarding-view" class="flex-1 flex w-full bg-background transition-opacity duration-300">                
         <aside class="hidden lg:flex w-64 border-r border-border-color p-4 items-center justify-center shrink-0">            
             <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-4656295367363190" data-ad-slot="YYYYYYYYYY"></ins>            
             <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>        
         </aside>
 
-        <div class="flex-1 flex flex-col items-center justify-start relative px-4 overflow-y-auto py-8">                        
+        <div class="flex-1 flex flex-col items-center justify-start relative px-4 py-8">                        
             
-            <div class="w-full max-w-md p-8 bg-surface border border-border-color rounded-2xl shadow-md mb-6 shrink-0 mt-4 md:mt-12">                
+            <div class="w-full max-w-md p-8 bg-surface border border-border-color rounded-2xl shadow-md mb-6 mt-4 md:mt-12 shrink-0">                
                 <div class="text-center mb-8">                    
                     <h1 class="text-3xl font-extrabold tracking-tight text-primary-dark mb-1">Anlık Maaş</h1>                    
                     <p class="text-text-muted text-xs uppercase tracking-widest font-medium">Verimlilik Paneli</p>                
@@ -166,8 +166,14 @@
                 </div>            
             </article>
             
-            <footer class="w-full max-w-3xl border-t border-border-color pt-6 pb-12 flex items-center justify-center text-xs text-text-muted px-4 md:px-0 mt-auto">                
+            <footer class="w-full max-w-3xl border-t border-border-color pt-6 pb-12 flex flex-col md:flex-row items-center justify-between text-xs text-text-muted px-4 md:px-0 mt-auto">                
                 <div>&copy; 2026 Anlık Maaş - Tüm Hakları Saklıdır.</div>                
+                <div class="flex gap-4 mt-4 md:mt-0">                    
+                    <a href="hakkimizda.html" class="hover:text-primary-dark transition-colors">Hakkımızda</a>
+                    <a href="gizlilik.html" class="hover:text-primary-dark transition-colors">Gizlilik Politikası</a>                    
+                    <a href="kosullar.html" class="hover:text-primary-dark transition-colors">Kullanım Koşulları</a>                    
+                    <a href="iletisim.html" class="hover:text-primary-dark transition-colors">İletişim</a>                
+                </div>            
             </footer>
         </div>
         
@@ -177,8 +183,9 @@
         </aside>    
     </section>
 
-    <div id="dashboard-container" class="h-full w-full flex flex-col hidden opacity-0 transition-opacity duration-300">                
-        <nav class="h-16 border-b border-border-color bg-surface flex items-center justify-between px-4 md:px-6 shrink-0 shadow-sm z-20">            
+    <!-- DASHBOARD (MESAİ EKRANI) -->
+    <div id="dashboard-container" class="flex-1 flex flex-col w-full hidden opacity-0 transition-opacity duration-300">                
+        <nav class="sticky top-0 h-16 border-b border-border-color bg-surface flex items-center justify-between px-4 md:px-6 shrink-0 shadow-sm z-50">            
             <div class="font-bold text-xl tracking-tight text-primary-dark hidden sm:block">Anlık Maaş</div>            
             <div class="flex gap-2 sm:gap-4 w-full sm:w-auto justify-between sm:justify-end">                
                 <button id="btn-geri-don" class="text-text-muted px-3 md:px-4 py-2 rounded-lg text-sm font-semibold hover:bg-surface-variant hover:text-text-main transition-colors flex items-center gap-1.5">                    
@@ -190,13 +197,13 @@
             </div>        
         </nav>
         
-        <main class="flex-1 flex w-full relative overflow-y-auto">            
+        <main class="flex-1 flex w-full relative">            
             <aside class="hidden lg:flex w-64 border-r border-border-color bg-surface-variant/30 p-4 items-center justify-center shrink-0">                
                 <ins class="adsbygoogle" style="display:inline-block;width:160px;height:600px" data-ad-client="ca-pub-4656295367363190" data-ad-slot="YYYYYYYYYY"></ins>                
                 <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>            
             </aside>
             
-            <section class="flex-1 flex flex-col items-center pt-4 pb-24 px-4 md:px-6 relative w-full">                                
+            <section class="flex-1 flex flex-col items-center pt-4 pb-8 px-4 md:px-6 relative w-full">                                
                 <div class="w-full max-w-4xl lg:hidden flex items-center justify-center shrink-0 mb-6 mt-2">                    
                     <ins class="adsbygoogle" style="display:inline-block;width:320px;height:100px" data-ad-client="ca-pub-4656295367363190" data-ad-slot="YYYYYYYYYY"></ins>                    
                     <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>                
@@ -232,7 +239,7 @@
                     </div>                
                 </div>
                 
-                <div class="w-full max-w-4xl mb-auto">                    
+                <div class="w-full max-w-4xl mb-6">                    
                     <div class="w-full bg-surface border border-border-color rounded-2xl shadow-sm p-6 flex flex-col items-center justify-center">                        
                         <h2 class="text-text-muted text-xs font-bold uppercase tracking-widest mb-2">Bu Ay Toplam</h2>                        
                         <div class="flex items-baseline justify-center gap-2 w-full px-4 overflow-hidden">                            
@@ -242,16 +249,15 @@
                     </div>                
                 </div>
                 
-                <div class="absolute bottom-0 left-0 w-full bg-surface border-t border-border-color px-4 md:px-6 py-4 flex flex-col items-center justify-center shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.02)] z-10">                    
-                    <div class="w-full max-w-4xl">                        
-                        <div class="flex justify-between items-end mb-2">                            
-                            <span class="text-[9px] md:text-[10px] font-bold tracking-widest text-text-muted uppercase">Mesai Bitimine Kalan Zaman</span>                            
-                            <span id="kalan-zaman-metni" class="text-xs md:text-sm font-bold text-primary-dark tabular-nums">Hesaplanıyor...</span>                        
-                        </div>                        
-                        <div class="h-1.5 w-full bg-surface-variant rounded-full overflow-hidden">                            
-                            <div id="ilerleme-cubugu" class="h-full bg-primary w-[0%] transition-all duration-100"></div>                        
-                        </div>                    
-                    </div>                
+                <!-- İlerleme Çubuğu - Artık en alta doğal olarak yapışacak -->
+                <div class="w-full max-w-4xl mt-auto pt-4 pb-4">                    
+                    <div class="flex justify-between items-end mb-2 px-2">                            
+                        <span class="text-[9px] md:text-[10px] font-bold tracking-widest text-text-muted uppercase">Mesai Bitimine Kalan Zaman</span>                            
+                        <span id="kalan-zaman-metni" class="text-xs md:text-sm font-bold text-primary-dark tabular-nums">Hesaplanıyor...</span>                        
+                    </div>                        
+                    <div class="h-1.5 w-full bg-surface-variant rounded-full overflow-hidden shadow-inner">                            
+                        <div id="ilerleme-cubugu" class="h-full bg-primary w-[0%] transition-all duration-100"></div>                        
+                    </div>                    
                 </div>            
             </section>
             
@@ -286,7 +292,57 @@
         </div>    
     </div>
 
-    <script>        
+    <!-- MODERN COOKIE ONAY KARTI (Sol Alt Köşe) -->
+    <div id="cookie-banner" class="fixed bottom-4 left-4 md:bottom-6 md:left-6 w-[calc(100%-2rem)] md:w-[360px] bg-surface border border-border-color shadow-2xl rounded-2xl z-[9999] opacity-0 translate-y-4 transition-all duration-500 pointer-events-none flex flex-col p-5">
+        <div class="flex items-center gap-3 mb-3">
+            <span class="text-2xl">🍪</span>
+            <h3 class="font-bold text-text-main text-sm">Çerez Tercihleri</h3>
+        </div>
+        <p class="text-xs text-text-muted mb-5 leading-relaxed">
+            Size daha iyi bir deneyim sunmak ve reklamları kişiselleştirmek için çerezleri kullanıyoruz. Daha fazla bilgi için <a href="gizlilik.html" class="text-primary-dark font-semibold hover:underline">Gizlilik Politikamızı</a> inceleyebilirsiniz.
+        </p>
+        <div class="flex gap-2 w-full">
+            <button id="btn-cookie-reddet" class="flex-1 bg-surface-variant text-text-main px-4 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-border-color transition-colors active:scale-95">
+                Reddet
+            </button>
+            <button id="btn-cookie-kabul" class="flex-1 bg-primary text-white px-4 py-2.5 rounded-xl font-bold text-xs uppercase tracking-wider hover:bg-primary-dark transition-colors shadow-sm active:scale-95">
+                Kabul Et
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Yeni Modern Cookie Banner Mantığı
+        document.addEventListener("DOMContentLoaded", () => {
+            const banner = document.getElementById('cookie-banner');
+            const btnKabul = document.getElementById('btn-cookie-kabul');
+            const btnReddet = document.getElementById('btn-cookie-reddet');
+
+            // Kullanıcı daha önce bir seçim yapmadıysa kartı göster
+            if (!localStorage.getItem('cerezTercihi')) {
+                setTimeout(() => {
+                    banner.classList.remove('opacity-0', 'translate-y-4', 'pointer-events-none');
+                }, 1000);
+            }
+
+            // Kartı gizleme fonksiyonu
+            function kartiGizle() {
+                banner.classList.add('opacity-0', 'translate-y-4', 'pointer-events-none');
+            }
+
+            // Kabul Et butonuna basılınca
+            btnKabul.addEventListener('click', () => {
+                localStorage.setItem('cerezTercihi', 'kabul');
+                kartiGizle();
+            });
+
+            // Reddet butonuna basılınca
+            btnReddet.addEventListener('click', () => {
+                localStorage.setItem('cerezTercihi', 'reddedildi');
+                kartiGizle();
+            });
+        });
+
         function showNotification(title, message, icon) {            
             const container = document.getElementById('toast-container');            
             const toast = document.createElement('div');                        
